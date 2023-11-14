@@ -11,6 +11,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/task")
+@CrossOrigin
 public class TaskerController {
     @Autowired
     private TaskService taskService;
