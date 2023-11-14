@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Your Tasks</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <Nav>
+                <header>Task Catagories</header>
+
+                <div class="add-task-catagory-block">
+                    <input type="text" id="addNewTaskCatagoryName" class="add-task-catagory-name-txt-field" placeholder="Enter text">
+                    <button id="addNewTaskCatagoryBtn" class="add-task-catagory-btn"><i class="fa fa-plus"></i> <b>Create</b></button>
+                </div>
+
+                <div id="taskCatagoryList" class="task-catagory-list">
+                    <ul id="taskCatagoryListUl">
+                        <li><a class="task-catagoty-list-item" href="#">Personal</a></li>
+                    </ul>
+                </div>
+
+            </Nav>
+        </div>
+
+        <div class="container">
+
+            <div class="task-creator-block">
+                <button id="createNewTaskBtn" class="add-task-btn"><i class="fa fa-plus"></i> <b>New Task</b> </button>
+            </div>
+            
+            <div id="taskViewer" class="task-viewer">
+                <div id="taskBox" class="task-box">
+                    <h3 id="taskName" class="task-name">Task Name</h3>
+                    <p id="taskInfo" class="task-info">Task information goes here. Write all you want and explain the task that you want to achive</p>
+                    <ul id="subTaskList">
+                        <li>Pre Requsiter for Task 1</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+    </div>
+
+    <div id="taskCreatorPopup" class="task-creator-overlay">
+
+        <div class="form-header">
+            <h2>Add New Task</h2>
+            <button id="closeCreateNewTaskPopup" class="close-button" type="button">&#10006;</button>
+        </div>
+
+        <div class="new-task-info">
+
+            <input type="text" id="newTaskName" class="new-task-txt-field" name="taskName" placeholder="Enter Task Title" required>
+            <input type="text" id="newTaskInfo" class="new-task-txt-field" name="taskDescription" placeholder="Enter Task Description">
+    
+            <h4>Task Complition Pre-Requsites</h4>
+    
+            <div id="subtask" class="subtask">
+                <input id="subtaskTextField" type="text" class="subtask-txt-field" placeholder="Subtask Title">
+                <button id="addNewSubtaskTextField" class="add-subtask-button" type="button">Add Subtask</button>
+            </div>
+    
+            <input type="submit" value="Submit" id="submitNewTaskBtn" class="submit-btn add-subtask-button">
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
