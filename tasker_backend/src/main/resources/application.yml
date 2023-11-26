@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/tasker?useSSL=false
+    username: root
+    password: RIPxman123
+
+  jpa:
+    show-sql=true:
